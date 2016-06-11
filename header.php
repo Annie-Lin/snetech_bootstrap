@@ -25,11 +25,13 @@
 <!-- 提高程序運行效率 -->
 <?php flush(); ?>
 <body>
+<div class="nav_menu_container">
+    <!-- Text Logo -->
+    <h3 id="logo"><a href="<?php echo get_option('home'); ?>"> <?php bloginfo ( 'name' ) ; ?> LOGO </a></h3><!-- Navigation Menu -->
+    <!-- 把在控制台→外觀→選單中所設定的選單叫出來 -->
+    <?php wp_nav_menu (); ?>
+</div>
 <div id="wrapper">
-	<!-- Text Logo -->
-	<h3 id="logo"><a href="<?php echo get_option('home'); ?>"> <?php bloginfo ( 'name' ) ; ?> LOGO </a> </h3> 
-	<!-- <h2 class="grid_12 caption clearfix"> <?php bloginfo ( 'description' ) ; ?> </h2> -->
-	<!-- Navigation Menu -->
-	<!-- 把在控制台→外觀→選單中所設定的選單叫出來 -->
-	<?php wp_nav_menu (); ?>
+    
+	
 	
