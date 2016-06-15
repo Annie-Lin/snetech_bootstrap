@@ -1,15 +1,39 @@
-<?php get_header(); ?>
-	<!-- Column 1 / Content -->
-	<?php if (have_posts()) : the_post(); update_post_caches($posts); ?>
-	<h2 class="grid_12 caption clearfix"><?php the_title(); ?></h2>
-	<div class="grid_8">
-		<?php the_content(); ?>
-		<?php comments_template(); ?>
-	</div>
-	<?php else : ?>
-	<div class="grid_8">
-		沒有找到你想要的頁面！
-	</div>
-	<?php endif; ?>
-	<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<?php
+/**
+ * Template for displaying pages
+ * 
+ * @package bootstrap-basic
+ */
+
+get_header();
+
+/**
+ * determine main column size from actived sidebar
+ */
+$main_column_size = bootstrapBasicGetMainColumnSize();
+?> 
+<?php get_sidebar('left'); ?> 
+				<div class="col-md-<?php echo $main_column_size; ?> content-area" id="main-column">
+					
+					<main id="main" class="site-main" role="main">
+						<?php 
+						while (have_posts()) {
+							the_post();
+
+							get_template_part('content', 'page');
+
+							echo "\n\n";
+							
+							// If comments are open or we have at least one comment, load up the comment template
+							if (comments_open() || '0' != get_comments_number()) {
+								comments_template();
+							}
+
+							echo "\n\n";
+
+						} //endwhile;
+						?> 
+					</main>
+				</div>
+<?php get_sidebar('right'); ?> 
+<?php get_footer(); ?> 

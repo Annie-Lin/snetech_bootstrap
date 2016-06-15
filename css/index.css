@@ -1,0 +1,14 @@
+#index_main_container{
+	/*padding-top: 100px;*/
+}
+
+/*index-section*/
+.index_section{
+	width: 100%;
+	text-align: center;
+	border: 1px solid red;
+}
+.index_solution_item{
+	/*float: left;*/
+	text-align: center;
+}

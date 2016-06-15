@@ -1,37 +1,67 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head profile="http://gmpg.org/xfn/11">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- 根據當前頁面顯示網頁標題 -->
-<title> <?php if ( is_home ( ) ) {
-        bloginfo ( 'name' ) ; echo " - " ; bloginfo ( 'description' ) ; 
-    } elseif ( is_category ( ) ) {
-        single_cat_title ( ) ; echo " - " ; bloginfo ( 'name' ) ; 
-    } elseif ( is_single ( ) || is_page ( ) ) {
-        single_post_title ( ) ; 
-    } elseif ( is_search ( ) ) { 
-        echo "搜索結果" ; echo " - " ; bloginfo ( 'name' ) ; 
-    } elseif ( is_404 ( ) ) { 
-        echo '頁面未找到!' ; 
-    } else {
-        wp_title ( '' , true ) ; 
-    } ?> </title>
-<!-- Stylesheets -->
-<link rel="stylesheet" href=" <?php bloginfo ( 'stylesheet_url' ) ; ?> " type="text/css" media="screen" />
+<?php
+/**
+ * The theme header
+ * 
+ * @package bootstrap-basic
+ */
+?>
+<!DOCTYPE html>
+<!--[if lt IE 7]>  <html class="no-js lt-ie9 lt-ie8 lt-ie7" <?php language_attributes(); ?>> <![endif]-->
+<!--[if IE 7]>     <html class="no-js lt-ie9 lt-ie8" <?php language_attributes(); ?>> <![endif]-->
+<!--[if IE 8]>     <html class="no-js lt-ie9" <?php language_attributes(); ?>> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
+	<head>
+		<meta charset="<?php bloginfo('charset'); ?>">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width">
 
-<!-- 讓插件等可以正常運行 -->
-<?php wp_head ( ) ; ?>
-</head>
-<!-- 提高程序運行效率 -->
-<?php flush(); ?>
-<body>
-<div class="nav_menu_container">
-    <!-- Text Logo -->
-    <h3 id="logo"><a href="<?php echo get_option('home'); ?>"> <?php bloginfo ( 'name' ) ; ?> LOGO </a></h3><!-- Navigation Menu -->
-    <!-- 把在控制台→外觀→選單中所設定的選單叫出來 -->
-    <?php wp_nav_menu (); ?>
-</div>
-<div id="wrapper">
-    
-	
-	
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+		
+		<!--wordpress head-->
+		<?php wp_head(); ?>
+	</head>
+	<body <?php body_class(); ?>>
+		<!--[if lt IE 8]>
+			<p class="ancient-browser-alert">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a>.</p>
+		<![endif]-->
+		
+		<div class="container page-container">
+			<?php do_action('before'); ?> 
+			<header role="banner">
+				<div class="row row-with-vspace site-branding">
+					<div class="col-md-6 site-title">
+						<h1 class="site-title-heading">
+							<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home"><?php bloginfo('name'); ?></a>
+						</h1>
+						<div class="site-description">
+							<small>
+								<?php bloginfo('description'); ?> 
+							</small>
+						</div>
+					</div>
+				</div><!--.site-branding-->
+				
+				<div class="row main-navigation">
+					<div class="col-md-12">
+						<nav class="navbar navbar-default" role="navigation">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-primary-collapse">
+									<span class="sr-only"><?php _e('Toggle navigation', 'bootstrap-basic'); ?></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+							</div>
+							
+							<div class="collapse navbar-collapse navbar-primary-collapse">
+								<?php wp_nav_menu(array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav', 'walker' => new BootstrapBasicMyWalkerNavMenu())); ?> 
+								<?php dynamic_sidebar('navbar-right'); ?> 
+							</div><!--.navbar-collapse-->
+						</nav>
+					</div>
+				</div><!--.main-navigation-->
+			</header>
+			
+			
+			<div id="content" class="row row-with-vspace site-content">
