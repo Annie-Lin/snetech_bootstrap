@@ -16,6 +16,46 @@ This theme built with Twitter Bootstrap v.3. It is basic theme with basic style 
 */
 @import "css/index.css";
 
+/*Navigation Menu*/
+#nav_menu {
+	
+}
+
+/*main meun item style*/
+#nav_menu ul {
+	
+}
+#nav_menu li {
+	
+}
+#nav_menu a {
+	
+}
+#nav_menu a:hover {
+
+}
+
+/*main meun current item style*/
+#nav_menu .current-menu-item{
+
+}
+#nav_menu .current-menu-item a {
+	
+}
+#nav_menu .current-menu-item a:hover {
+}
+
+/*sub meun item style*/
+#nav_menu .sub-menu ul{
+
+}
+#nav_menu .sub-menu li{
+	
+}
+#nav_menu .sub-menu a{
+	
+}
+
 /*
 Required WordPress CSS
 */

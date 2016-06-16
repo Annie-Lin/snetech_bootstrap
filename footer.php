@@ -23,6 +23,7 @@
 				</div>
 			</div>
 		</div><!--.container page-container-->
+
 		<!--wordpress footer-->
 		<?php wp_footer(); ?> 
 	</body>
