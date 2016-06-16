@@ -1,14 +1,51 @@
-#index_main_container{
-	/*padding-top: 100px;*/
-}
 
 /*index-section*/
 .index_section{
-	width: 100%;
 	text-align: center;
 	border: 1px solid red;
 }
 .index_solution_item{
-	/*float: left;*/
 	text-align: center;
+	border: 1px solid blue;
+}
+.index_case{
+	text-align: center;
+	border: 1px solid black;
+}
+.index_case_item{
+	text-align: center;
+	border: 1px solid blue;
+}
+
+/*bootstrap in 5 columns*/
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.col-xs-15 {
+    width: 20%;
+    float: left;
+}
+@media (min-width: 768px) {
+.col-sm-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-15 {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-15 {
+        width: 20%;
+        float: left;
+    }
 }
