@@ -1,0 +1,27 @@
+.page_area{
+	margin:0;
+	padding: 0;
+	/*text-align: center;*/
+	/*border: 1px solid red;*/
+}
+.page_title_area{
+	background-color: gray;
+	height: 300px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	display: block;
+	top:0;
+	left:0;
+
+	/*border: 3px solid yellow;*/
+}
+.page_content_area{
+	width: 80vw;
+	/*border: 1px solid blue;*/
+	margin: 0 auto;
+}
+
+#main{
+	
+}

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template for displaying pages
+ * Template Name: About page
  * 
  * @package bootstrap-basic
  */

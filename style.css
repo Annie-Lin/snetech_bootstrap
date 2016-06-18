@@ -15,7 +15,26 @@ This theme built with Twitter Bootstrap v.3. It is basic theme with basic style 
 
 */
 @import "css/index.css";
+@import "css/page.css";
 
+.container{
+	width: 100vw;
+}
+
+/*Navigation Bar*/
+.navbar{
+	padding: 0;
+	margin: 0;
+	top:0;
+	left: 0;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	
+}
+.navbar-collapse{
+	padding-right: 30px;
+}
 /*Navigation Menu*/
 #nav_menu {
 	
