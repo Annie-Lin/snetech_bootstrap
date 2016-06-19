@@ -12,19 +12,27 @@ get_header();
  */
 $main_column_size = bootstrapBasicGetMainColumnSize();
 ?> 
-<!-- <?php get_sidebar('left'); ?>  -->
-				<div class="page_area" id="main-column">
+<?php get_sidebar('left'); ?> 
+				<div class="col-md-<?php echo $main_column_size; ?> content-area" id="main-column">
 					<main id="main" class="site-main" role="main">
-						<?php if ( have_posts ( ) ) : while ( have_posts ( ) ) : the_post ( ) ; ?>
-						    <!-- 單篇post骨架 -->
-				        	<div class="page_title_area">
-				    	        <h1><?php the_title(); ?></h1>
-				            </div>
-				            <div class="page_content_area">
-				    	        <p><?php the_content(); ?></p>
-				            </div>
-						<?php endwhile ; ?> <?php endif ; ?>
+						<?php 
+						while (have_posts()) {
+							the_post();
+
+							get_template_part('content', 'page');
+
+							echo "\n\n";
+							
+							// If comments are open or we have at least one comment, load up the comment template
+							if (comments_open() || '0' != get_comments_number()) {
+								comments_template();
+							}
+
+							echo "\n\n";
+
+						} //endwhile;
+						?> 
 					</main>
 				</div>
-<!-- <?php get_sidebar('right'); ?>  -->
+<?php get_sidebar('right'); ?> 
 <?php get_footer(); ?> 

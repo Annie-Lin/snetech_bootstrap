@@ -12,7 +12,6 @@ get_header();
  */
 $main_column_size = bootstrapBasicGetMainColumnSize();
 ?> 
-<!-- <?php get_sidebar('left'); ?>  -->
 				<div class="page_area" id="main-column">
 					<main id="main" class="site-main" role="main">
 						<?php if ( have_posts ( ) ) : while ( have_posts ( ) ) : the_post ( ) ; ?>
@@ -26,5 +25,5 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 						<?php endwhile ; ?> <?php endif ; ?>
 					</main>
 				</div>
-<!-- <?php get_sidebar('right'); ?>  -->
+
 <?php get_footer(); ?> 

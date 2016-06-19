@@ -14,7 +14,7 @@
 	top:0;
 	left:0;
 
-	/*border: 3px solid yellow;*/
+	border: 1px solid gray;
 }
 .page_content_area{
 	width: 80vw;
