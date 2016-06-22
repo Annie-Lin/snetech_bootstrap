@@ -39,7 +39,7 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
             <?php endif ; ?>
         <?php endwhile ; ?> <?php else : ?>     
             <!-- 輸出找不到文章提示 -->
-            <h1>沒有成功案例</h1>
+            <h1>沒有解決方案</h1>
         <?php endif ; ?>
     </div>
 
