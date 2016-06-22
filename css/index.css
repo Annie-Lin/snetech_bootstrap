@@ -20,6 +20,11 @@
 	height: 100px;
 }
 
+/*more tag's link style*/
+.more-link{
+	color: red;
+}
+
 /*bootstrap in 5 columns*/
 .col-xs-15,
 .col-sm-15,

@@ -32,9 +32,8 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
             <?php if (in_category("solution") && has_tag("index")): ?>
             <!-- 單篇post骨架 -->
             <div class="index_solution_item col-xs-12 col-sm-15">
-                <img alt="" src="<?php bloginfo('template_url'); ?>/img/Art_Artdesigner.lv.png" />
                 <h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-                <p><?php the_content(); ?></p>
+                <p><?php the_content("",true); ?></p>
                 <button class="btn btn-primary"><a href="<?php the_permalink(); ?>">閱讀更多</a></button>
             </div>
             <?php endif ; ?>
