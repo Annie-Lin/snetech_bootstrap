@@ -32,7 +32,8 @@
 			<header role="banner">
 				<div class="row main-navigation">
 					<div>
-						<nav class="navbar navbar-default" role="navigation">
+						<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+							<div class="container">
 							<div class="navbar-header">
 								<button type="button" class="navbar-toggle navbar-right" data-toggle="collapse" data-target=".navbar-primary-collapse">
 									<span class="sr-only"><?php _e('Toggle navigation', 'bootstrap-basic'); ?></span>
@@ -49,6 +50,7 @@
 								<?php wp_nav_menu(array('theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav', 'walker' => new BootstrapBasicMyWalkerNavMenu())); ?> 
 								<?php dynamic_sidebar('navbar-right'); ?> 
 							</div><!--.navbar-collapse-->
+							</div>
 						</nav>
 					</div>
 				</div><!--.main-navigation-->

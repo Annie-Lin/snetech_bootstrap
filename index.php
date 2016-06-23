@@ -32,6 +32,9 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
             <?php if (in_category("solution") && has_tag("index")): ?>
             <!-- 單篇post骨架 -->
             <div class="index_solution_item col-xs-12 col-sm-15">
+                <p><?php if ( has_post_thumbnail() ) : 
+                            the_post_thumbnail();
+                        endif; ?></p>
                 <h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
                 <p><?php the_content("",true); ?></p>
                 <button class="btn btn-primary"><a href="<?php the_permalink(); ?>">閱讀更多</a></button>
@@ -56,8 +59,10 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 	            <!-- 單篇post骨架 -->
 	            <div class="index_case_item col-xs-12 col-sm-3">
 	                <!-- Post Title -->
-	                <h6 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
-	                <img alt="" src="<?php bloginfo('template_url'); ?>/img/223x112.gif" />
+	                <h6 class="title"><?php getTagsExcept("index"); ?></h6>
+	                <p><?php if ( has_post_thumbnail() ) : 
+                            the_post_thumbnail();
+                        endif; ?></p>
 	            </div>
 	            <?php endif ; ?>
 	        <?php endwhile ; ?> <?php else : ?>     

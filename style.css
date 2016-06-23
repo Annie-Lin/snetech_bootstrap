@@ -16,7 +16,28 @@ This theme built with Twitter Bootstrap v.3. It is basic theme with basic style 
 */
 @import "css/index.css";
 @import "css/page.css";
+@import "css/category.css";
 
+/*
+Reset
+ */
+body{ 
+	/*依照nav bar 高度調整*/
+	padding-top: 70px; 
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+a:hover{
+	text-decoration: none;
+	color: black;
+}
+
+/*
+sne theme
+ */
 .container{
 	width: 100vw;
 }

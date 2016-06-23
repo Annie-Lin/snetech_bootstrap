@@ -161,6 +161,18 @@ if (!function_exists('bootstrapBasicEnqueueScripts')) {
 }
 add_action('wp_enqueue_scripts', 'bootstrapBasicEnqueueScripts');
 
+/**
+ * sne theme functions
+ */
+function getTagsExcept($hideTag){
+    $post_tags = get_the_tags();
+    foreach( $post_tags as $tag)
+    {  
+      if($tag->name==$hideTag) continue;
+      echo $tag->name;    
+    } 
+};
+add_action('sne_getTagsExcept', 'getTagsExcept');
 
 /**
  * admin page displaying help.

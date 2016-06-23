@@ -1,0 +1,16 @@
+.content-area{
+	width:80vw;
+	margin: 0 auto;
+}
+
+.category_solution_title{
+	background-color: gray;
+	border: 1px solid gray;
+	height: 300px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	display: block;
+	top:0;
+	left:0;
+}
