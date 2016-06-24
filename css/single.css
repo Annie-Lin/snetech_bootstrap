@@ -1,0 +1,15 @@
+.single_case_title{
+	background-color: gray;
+	border: 1px solid gray;
+	height: 300px;
+	width: 100%;
+	margin: 0;
+	
+	padding-top: 150px;
+}
+
+.single_case_content{
+	margin: 0 auto;
+	border: 1pt solid red;
+	width: 80vw;
+}

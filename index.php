@@ -58,11 +58,13 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 	            <?php if (in_category("case") && has_tag("index")): ?>
 	            <!-- 單篇post骨架 -->
 	            <div class="index_case_item col-xs-12 col-sm-3">
+                    <a href="<?php the_permalink(); ?>">
 	                <!-- Post Title -->
 	                <h6 class="title"><?php getTagsExcept("index"); ?></h6>
 	                <p><?php if ( has_post_thumbnail() ) : 
                             the_post_thumbnail();
                         endif; ?></p>
+                    </a>
 	            </div>
 	            <?php endif ; ?>
 	        <?php endwhile ; ?> <?php else : ?>     
