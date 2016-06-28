@@ -25,6 +25,11 @@
 	color: red;
 }
 
+#index_intro{
+    background-image: url(../img/LandingPage_Section01.jpg);
+    height: 900px;
+}
+
 /*bootstrap in 5 columns*/
 .col-xs-15,
 .col-sm-15,

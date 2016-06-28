@@ -24,7 +24,7 @@ Reset
  */
 body{ 
 	/*依照nav bar 高度調整*/
-	padding-top: 70px; 
+	/*padding-top: 70px; */
 }
 
 a{
@@ -53,13 +53,26 @@ sne theme
 	-moz-border-radius: 0px;
 	border-radius: 0px;
 	
+	color: white;
+	font-size: 20px;
+	height: 60px;
+
+
+	/*background-color: red;*/
 }
 .navbar-collapse{
 	padding-right: 30px;
 }
+.navbar-brand{
+	padding-left: 50px;
+	font-size: 24px;
+	/*vertical-align: middle;*/
+}
 /*Navigation Menu*/
 #nav_menu {
-	
+	padding-right: 40px;
+	/*padding-top: 20px;
+	padding-bottom: 20px;*/
 }
 
 /*main meun item style*/
@@ -70,10 +83,14 @@ sne theme
 	
 }
 #nav_menu a {
-	
+	color: white;
 }
 #nav_menu a:hover {
-
+	color: white;
+	background-color: rgba(0,0,0,0.6);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 }
 
 /*main meun current item style*/
