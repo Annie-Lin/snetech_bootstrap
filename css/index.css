@@ -3,22 +3,6 @@
 	text-align: center;
 	/*border: 1px solid red;*/
 }
-.index_solution_item{
-	text-align: center;
-	border: 1px solid blue;
-}
-.index_case{
-	text-align: center;
-	border: 1px solid black;
-}
-.index_case_item{
-	text-align: center;
-	border: 1px solid blue;
-}
-
-.index_solution_thumbnail{
-	height: 100px;
-}
 
 /*more tag's link style*/
 .more-link{
@@ -29,8 +13,106 @@
     background-image: url(../img/LandingPage_Section01.jpg);
     background-size: cover;
     height: 100vh;
+    /*line-height: 100vh;*/
+}
+.index_intro_title{
+    font-size: 3em;
+    color: white;
+    padding-top: 45vh;
+}
+.index_intro_subtitle{
+    font-size: 1.5em;
+    color: white;
+}
+.typedText{
+    color: #F7C932;
 }
 
+#index_solution{
+    
+}
+.index_solution_top{
+    background-image: url(../img/LandingPage_Section02.jpg);
+    background-size: cover;
+    width: 100vw;
+    height: auto;
+}
+.index_solution_title{
+    font-size: 1.8em;
+    text-align: left;
+    height: 490px;
+    padding-left: 40vw;
+    padding-top: 5vh;
+}
+.index_solution_bottom{
+    background-color: #F3F3F3;
+    height: 432px;
+    margin: 0 auto;
+    padding-top: 6vh;
+}
+.index_solution_bottom_list{
+    margin: 0 auto;
+    width: 80vw;
+}
+.index_solution_item{
+    text-align: center;
+    /*border: 1px solid blue;*/
+    width: 224px;
+    height: 350px;
+}
+.index_solution_card{
+    background-color: white;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    width: 200px;
+    height: 330px;
+    margin:0 auto;
+    box-shadow: 0 2px 5px #727272;
+}
+.index_solution_thumbnail{
+    padding-top: 20px;
+}
+.index_solution_item_title{
+    font-size: 1.5em;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto;
+}
+.index_solution_item_title_topbar{
+    border-bottom: 3px solid #F7C932;
+    width: 60%;
+    height: 10px;
+    margin: 0 auto;
+}
+.index_solution_item_title_bottombar{
+    border-top: 3px solid #F7C932;
+    width: 60%;
+    height: 10px;
+    margin: 0 auto;
+}
+.index_solution_item_content{
+    font-size: 1em;
+    padding: 10px;
+    /*padding-bottom: 10px;*/
+}
+.btn{
+    background-color: #F7C932;
+    margin-top: -20px;
+}
+.btn a{
+    color: white;
+}
+
+.index_case{
+    text-align: center;
+    border: 1px solid black;
+}
+.index_case_item{
+    text-align: center;
+    border: 1px solid blue;
+}
 
 /*bootstrap in 5 columns*/
 .col-xs-15,

@@ -56,30 +56,24 @@ sne theme
 	border-radius: 0px;
 	
 	color: white;
-	font-size: 20px;
+	font-size: 1.2em;
 	height: 60px;
-
-
-	/*background-color: red;*/
 }
 .navbar-collapse{
 	padding-right: 30px;
 }
 .navbar-brand{
 	padding-left: 50px;
-	font-size: 24pt;
-	/*vertical-align: middle;*/
+	font-size: 1.3em;
 }
 /*Navigation Menu*/
 #nav_menu {
 	padding-right: 40px;
-	/*padding-top: 20px;
-	padding-bottom: 20px;*/
 }
 
 /*main meun item style*/
 #nav_menu ul {
-	
+	/*background-color: rgba(0,0,0,0.6);*/
 }
 #nav_menu li {
 	
@@ -90,30 +84,48 @@ sne theme
 #nav_menu a:hover {
 	color: white;
 	background-color: rgba(0,0,0,0.6);
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+.icon-bar{
+	background-color: white;
 }
 
 /*main meun current item style*/
 #nav_menu .current-menu-item{
-
+	background-color: rgba(0,0,0,0.6);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
 }
 #nav_menu .current-menu-item a {
 	
 }
 #nav_menu .current-menu-item a:hover {
 }
+#nav_menu .current-menu-item a:active {
+}
+#nav_menu .current-menu-item a:visited{
+}
 
 /*sub meun item style*/
+#nav_menu .sub-menu{
+	background-color: rgba(0,0,0,0.6);
+}
 #nav_menu .sub-menu ul{
-
+	
 }
 #nav_menu .sub-menu li{
 	
 }
 #nav_menu .sub-menu a{
-	
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+#nav_menu .sub-menu a:hover {
+	color: rgba(0,0,0,0.6);
 }
 
 /*

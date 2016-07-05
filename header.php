@@ -36,7 +36,7 @@
 						<nav class="navbar navbar-fixed-top" role="navigation">
 							<div class="container">
 							<div class="navbar-header">
-								<button type="button" class="navbar-toggle navbar-right" data-toggle="collapse" data-target=".navbar-primary-collapse">
+								<button type="button" class="navbar-toggle navbar-right navbar-fixed-top" data-toggle="collapse" data-target=".navbar-primary-collapse">
 									<span class="sr-only"><?php _e('Toggle navigation', 'bootstrap-basic'); ?></span>
 									<span class="icon-bar"></span>
 									<span class="icon-bar"></span>
