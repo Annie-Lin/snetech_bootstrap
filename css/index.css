@@ -1,7 +1,7 @@
 
 .index_section{
 	text-align: center;
-	border: 1px solid red;
+	/*border: 1px solid red;*/
 }
 .index_solution_item{
 	text-align: center;
@@ -27,8 +27,10 @@
 
 #index_intro{
     background-image: url(../img/LandingPage_Section01.jpg);
-    height: 900px;
+    background-size: cover;
+    height: 100vh;
 }
+
 
 /*bootstrap in 5 columns*/
 .col-xs-15,
