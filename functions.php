@@ -222,3 +222,32 @@ require get_template_directory() . '/inc/template-functions.php';
  */
 require get_template_directory() . '/inc/widgets/BootstrapBasicSearchWidget.php';
 require get_template_directory() . '/inc/template-widgets-hook.php';
+
+
+
+/**
+* --------------------------------------------------------------
+* META BOX
+* --------------------------------------------------------------
+*/
+
+add_filter( 'rwmb_meta_boxes', 'sne_meta_boxes' );
+function sne_meta_boxes( $meta_boxes ) {
+    $meta_boxes[] = array(
+        'title'      => __( '其他欄位', 'textdomain' ),
+        'post_types' => 'post',
+        'fields'     => array(
+            array(
+                'id'   => 'short_description',
+                'name' => __( '簡短說明', 'textdomain' ),
+                'type' => 'textarea',
+            ),
+            array(
+                'id'   => 'en_title',
+                'name' => __( '英文標題', 'textdomain' ),
+                'type' => 'text',
+            ),
+        ),
+    );
+    return $meta_boxes;
+}
