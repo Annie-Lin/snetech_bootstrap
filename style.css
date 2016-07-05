@@ -14,6 +14,7 @@ Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, custo
 This theme built with Twitter Bootstrap v.3. It is basic theme with basic style for build new theme with Bootstrap.
 
 */
+
 @import "css/index.css";
 @import "css/page.css";
 @import "css/category.css";
@@ -25,6 +26,7 @@ Reset
 body{ 
 	/*依照nav bar 高度調整*/
 	/*padding-top: 70px; */
+	font-family: 'Noto Sans TC', sans-serif; /*思源黑體*/
 }
 
 a{
@@ -65,7 +67,7 @@ sne theme
 }
 .navbar-brand{
 	padding-left: 50px;
-	font-size: 24px;
+	font-size: 24pt;
 	/*vertical-align: middle;*/
 }
 /*Navigation Menu*/
