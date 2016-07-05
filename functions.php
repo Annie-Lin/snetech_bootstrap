@@ -235,7 +235,7 @@ add_filter( 'rwmb_meta_boxes', 'sne_meta_boxes' );
 function sne_meta_boxes( $meta_boxes ) {
     $meta_boxes[] = array(
         'title'      => __( '其他欄位', 'textdomain' ),
-        'post_types' => 'post',
+        'post_types' => array('post'),
         'fields'     => array(
             array(
                 'id'   => 'short_description',

@@ -29,9 +29,13 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
         </div>
         <div class="row index_solution_bottom">
             <div class="row index_solution_bottom_list">
-                <!-- category:solution && tag:index -->
-                <?php if ( have_posts ( ) ) : while ( have_posts ( ) ) : the_post ( ) ; ?>
-                    <?php if (in_category("solution") && has_tag("index")): ?>
+
+                <!-- post-type:solution -->
+
+                <?php $args = array( 'post_type' => 'solution', 'posts_per_page' => 5 );
+                    $loop = new WP_Query( $args );
+                    if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
                     <!-- 單篇post骨架 -->
                     <div class="index_solution_item col-xs-12 col-sm-15">
                         <div class="index_solution_card">
@@ -41,12 +45,12 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
                             <div class="index_solution_item_title_topbar"></div>
                             <div class="index_solution_item_title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
                             <div class="index_solution_item_title_bottombar"></div>
-                            <div class="index_solution_item_content"><?php the_content("",true); ?></div>
+                            <div class="index_solution_item_content"><?php the_excerpt(); ?></div>
                         </div>
                         <button class="btn"><a href="<?php bloginfo('wpurl'); ?>/category/solution/">閱讀更多</a></button>
                     </div>
-                    <?php endif ; ?>
-                <?php endwhile ; ?> <?php else : ?>     
+
+                <?php endwhile ; ?><?php wp_reset_postdata(); ?><?php else : ?>     
                     <!-- 輸出找不到文章提示 -->
                     <h1>沒有解決方案</h1>
                 <?php endif ; ?>
