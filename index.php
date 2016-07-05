@@ -69,8 +69,9 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 	        <div class="row index_case_title">成功案例</div>
             <div class="row index_case_list">
 	        <!-- category:case && tag:index -->
-    	        <?php if ( have_posts ( ) ) : while ( have_posts ( ) ) : the_post ( ) ; ?>
-    	            <?php if (in_category("case") && has_tag("index")): ?>
+    	        <?php $args = array( 'post_type' => 'case', 'posts_per_page' => 4 );
+                    $loop = new WP_Query( $args );
+                    if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); ?>
     	            <!-- 單篇post骨架 -->
     	            <div class="index_case_item row col-sm-3">
                         <div class="index_case_card" >
@@ -84,8 +85,7 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
                             </a>
                         </div>
     	            </div>
-    	            <?php endif ; ?>
-    	        <?php endwhile ; ?> <?php else : ?>     
+    	            <?php endwhile ; ?><?php wp_reset_postdata(); ?><?php else : ?>     
     	            <!-- 輸出找不到文章提示 -->
     	            <h1>沒有成功案例</h1>
     	        <?php endif ; ?>
