@@ -1,7 +1,11 @@
+#index_main_container{
+    /*width: 100vw;*/
+}
 
 .index_section{
 	text-align: center;
 	/*border: 1px solid red;*/
+    /*width: 100vw;*/
 }
 
 /*more tag's link style*/
@@ -13,7 +17,6 @@
     background-image: url(../img/LandingPage_Section01.jpg);
     background-size: cover;
     height: 100vh;
-    /*line-height: 100vh;*/
 }
 .index_intro_title{
     font-size: 3em;
@@ -39,16 +42,15 @@
 }
 .index_solution_title{
     font-size: 1.8em;
-    text-align: left;
+    text-align: center;
     height: 490px;
-    padding-left: 40vw;
     padding-top: 5vh;
 }
 .index_solution_bottom{
     background-color: #F3F3F3;
-    height: 432px;
     margin: 0 auto;
     padding-top: 6vh;
+    padding-bottom: 6vh;
 }
 .index_solution_bottom_list{
     margin: 0 auto;
@@ -56,7 +58,6 @@
 }
 .index_solution_item{
     text-align: center;
-    /*border: 1px solid blue;*/
     width: 224px;
     height: 350px;
 }
@@ -73,6 +74,7 @@
 .index_solution_thumbnail{
     padding-top: 20px;
 }
+
 .index_solution_item_title{
     font-size: 1.5em;
     width: 100%;
@@ -95,7 +97,6 @@
 .index_solution_item_content{
     font-size: 1em;
     padding: 10px;
-    /*padding-bottom: 10px;*/
 }
 .btn{
     background-color: #F7C932;
@@ -105,13 +106,77 @@
     color: white;
 }
 
+.index_customization_top{
+    /*height: 432px;*/
+}
+.index_customization_title{
+    font-size: 1.8em;
+    text-align: left;
+    /*height: 490px;*/
+    padding-left: 45vw;
+    padding-top: 6vh;
+}
+.index_customization_img{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-top: 5px;
+    padding-bottom: 40px;
+}
+.index_customization_img img{
+    width: 70%;
+    height: auto;
+}
+
 .index_case{
     text-align: center;
-    border: 1px solid black;
+    background-color: #F7C932;
+    /*height: 312px;*/
+    margin: 0 auto;
+    color: white;
+}
+.index_case_title{
+    font-size: 1.5em;
+    padding-top: 30px;
+}
+.index_case_list{
+    width: 80vw;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 30px;
 }
 .index_case_item{
-    text-align: center;
-    border: 1px solid blue;
+    margin: 0 auto;
+}
+.index_case_card{
+    background-color: white;
+    width: 266px;
+    height: 149px;
+    padding: 0;
+    margin: 0;
+}
+.index_case_card_title{
+    font-size: 1.5em;
+    height: 40px;
+    line-height: 40px;
+    padding-top: 10px;
+}
+.index_case_card_title_bottombar{
+    border-top: 3px solid #F7C932;
+    width: 40%;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+#index_team{
+    padding-bottom: 50px;
+}
+.index_team_content{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.index_team_img{
+    padding-bottom: 20px;
 }
 
 /*bootstrap in 5 columns*/

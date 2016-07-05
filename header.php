@@ -33,7 +33,7 @@
 			<header role="banner">
 				<div class="row main-navigation">
 					<div>
-						<nav class="navbar navbar-fixed-top" role="navigation">
+						<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 							<div class="container">
 							<div class="navbar-header">
 								<button type="button" class="navbar-toggle navbar-right navbar-fixed-top" data-toggle="collapse" data-target=".navbar-primary-collapse">
