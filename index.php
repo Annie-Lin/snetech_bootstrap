@@ -16,10 +16,10 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 <div id="index_main_container">
 
 	<div id="index_intro" class="index_section row">
-        <h1>資產異動管理可以更容易</h1>
+        <?php echo do_shortcode( '[typed string0="資產異動管理" string1="衣物洗滌管理" typeSpeed="40" startDelay="0" backSpeed="40" backDelay="500" loop="1"]' ) ?>
+        <h1>可以更容易</h1>
         <h6>力十幫您找出最佳解決方案</h6>
-        透過<span id="changing-text">123456</span>改變這座島嶼面對的挑戰
-        <?php echo do_shortcode( '[typed string0="First sentence" string1="Second sentence" typeSpeed="40" startDelay="0" backSpeed="40" backDelay="500"]' ) ?>
+        
     </div>
 
     <div id="index_solution" class="index_section row">
