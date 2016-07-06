@@ -37,6 +37,10 @@ a:hover{
 	text-decoration: none;
 	color: black;
 }
+img{
+    max-width: 99%;
+    height: auto;
+}
 
 /*
 sne theme
@@ -60,7 +64,11 @@ sne theme
 .navbar-brand{
 	padding-left: 50px;
 	font-size: 1.3em;
-	
+}
+@media (max-width: 768px) {
+	.navbar-brand{
+		padding-left: 20px;
+	}
 }
 .navbar-brand span{
 	color: white;

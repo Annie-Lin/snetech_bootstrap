@@ -1,4 +1,3 @@
-
 .index_section{
 	text-align: center;
 	width: 100vw;
@@ -103,10 +102,6 @@
     margin-top: 20px;
     margin-bottom: 40px;
 }
-.index_customization_img img{
-    width: 100%;
-    height: auto;
-}
 
 .index_case{
     text-align: center;
@@ -128,7 +123,6 @@
 .index_case_card{
     background-color: white;
     margin: 0 1px;
-
 }
 .index_case_card_title{
     font-size: 1.5em;
@@ -146,10 +140,6 @@
 .index_case_card_img{
     padding-bottom: 10px;
 }
-.index_case_card_img img{
-    width: 90%;
-    height: auto;
-}
 
 #index_team{
     padding-bottom: 50px;
@@ -161,10 +151,6 @@
 .index_team_img{
     padding-bottom: 50px;
     margin: 0 auto;
-}
-.index_team_img img{
-    max-width: 99%;
-    height: auto;
 }
 
 /*bootstrap in 5 columns*/
