@@ -23,10 +23,14 @@ This theme built with Twitter Bootstrap v.3. It is basic theme with basic style 
 /*
 Reset
  */
+html{
+	height: 100%;
+}
 body{ 
 	/*依照nav bar 高度調整*/
 	/*padding-top: 70px; */
 	font-family: 'Noto Sans TC', sans-serif; /*思源黑體*/
+	height: 100%;
 }
 
 a{
@@ -40,6 +44,22 @@ a:hover{
 img{
     max-width: 99%;
     height: auto;
+}
+
+/*Equal Height*/
+@media (min-width: 768px) {
+	.equalHeightRow{
+		display: table;
+	}
+	.equalHeightCell{
+		float: none;
+		display: table-cell;
+		vertical-align: top;
+	}
+}
+.equalHeightRow{
+}
+.equalHeightCell{
 }
 
 /*

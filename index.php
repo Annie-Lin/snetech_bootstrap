@@ -30,25 +30,26 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
         </div>
 
         <div class="index_solution_bottom row">
-            <div class="index_solution_bottom_list col-xs-10 col-xs-offset-1 row">
+            <div class="index_solution_bottom_list col-xs-10 col-xs-offset-1 row equalHeightRow">
                 <!-- post-type:solution -->
                 <?php $args = array( 'post_type' => 'solution', 'posts_per_page' => 5 );
                     $loop = new WP_Query( $args );
                     if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); ?>
                     <!-- 單篇post骨架 -->
-                    <div class="index_solution_item col-xs-6 col-md-15">
-                        <div class="index_solution_card">
-                            <p class="index_solution_thumbnail"><?php if ( has_post_thumbnail() ) : 
-                                        the_post_thumbnail();
-                                    endif; ?></p>
-                            <div class="index_solution_item_title_topbar"></div>
-                            <div class="index_solution_item_title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-                            <div class="index_solution_item_title_bottombar"></div>
-                            <div class="index_solution_item_content"><?php the_excerpt(); ?></div>
+                    <div class="index_solution_item col-xs-12 col-md-15 equalHeightCell">
+                        <div class="index_solution_card row">
+                            <div class="index_solution_thumbnail col-xs-4 col-sm-12">
+                                <?php if ( has_post_thumbnail() ) : the_post_thumbnail(); endif; ?></div>
+                            <div class="index_solution_text col-xs-8 col-sm-12">
+                                <div class="index_solution_item_title_topbar"></div>
+                                <div class="index_solution_item_title">
+                                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+                                <div class="index_solution_item_title_bottombar"></div>
+                                <div class="index_solution_item_content"><?php the_excerpt(); ?></div>
+                            </div>
                         </div>
                         <button class="btn"><a href="<?php bloginfo('wpurl'); ?>/category/solution/">閱讀更多</a></button>
                     </div>
-
                 <?php endwhile ; ?><?php wp_reset_postdata(); ?><?php else : ?>     
                     <!-- 輸出找不到文章提示 -->
                     <h1>沒有解決方案</h1>
@@ -67,13 +68,13 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 
     	<div class="index_case row">
 	        <div class="index_case_title">成功案例</div>
-            <div class="index_case_list col-xs-10 col-xs-offset-1 row">
+            <div class="index_case_list col-xs-10 col-xs-offset-1 row equalHeightRow">
 	        <!-- category:case && tag:index -->
     	        <?php $args = array( 'post_type' => 'case', 'posts_per_page' => 4 );
                     $loop = new WP_Query( $args );
                     if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); ?>
     	            <!-- 單篇post骨架 -->
-    	            <div class="index_case_item col-sm-3 col-xs-12">
+    	            <div class="index_case_item col-sm-3 col-xs-12 equalHeightCell">
                         <div class="index_case_card" >
                             <a href="<?php the_permalink(); ?>">
                             <!-- Post Title -->
