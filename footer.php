@@ -9,12 +9,12 @@
 			</div><!--.site-content-->
 			<!-- Footer -->
 
-			<div class="row footer_bg">
-				<div class="row footer_list">
-					<div class="col-sm-3 col-xs-12 footer_title">
+			<div class="footer_bg row">
+				<div class="footer_list col-xs-10 col-xs-offset-1">
+					<div class="footer_title col-sm-3 col-xs-12 ">
 						<h1><?php bloginfo ( 'name' ) ; ?></h1>
 					</div>
-					<div class="col-sm-9 col-xs-12 footer_content">
+					<div class="footer_content col-sm-9 col-xs-12 ">
 					    <p>service_sne@snetech.com.tw</p>
 					    <p>TEL:04-2539-3970</p>
 					    <p>FAX:04-2539-3970</p>

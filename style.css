@@ -48,17 +48,11 @@ sne theme
 
 /*Navigation Bar*/
 .navbar{
-	padding: 0;
-	margin: 0;
-	top:0;
-	left: 0;
-	-webkit-border-radius: 0px;
-	-moz-border-radius: 0px;
-	border-radius: 0px;
-	
-	color: white;
 	font-size: 1.2em;
-	height: 60px;
+	height: 50px;
+	
+	background: rgba(0,0,0,0.6);
+	border: 0;
 }
 .navbar-collapse{
 	padding-right: 30px;
@@ -66,16 +60,39 @@ sne theme
 .navbar-brand{
 	padding-left: 50px;
 	font-size: 1.3em;
+	
 }
+.navbar-brand span{
+	color: white;
+}
+.navbar-default .navbar-toggle{
+	border: 0;
+}
+.navbar-default .navbar-toggle:hover {
+  background: rgba(0,0,0,0);
+  border: 0;
+}
+.navbar-default .navbar-toggle .icon-bar,
+.navbar-default .navbar-toggle:visited .icon-bar{
+	background-color: white;
+}
+.navbar-default .navbar-toggle:hover .icon-bar{
+  background-color: #F7C932;
+}
+
 /*Navigation Menu*/
 #nav_menu {
 	padding-right: 40px;
-	background-color: gray;
+	box-shadow: 0;
+}
+#nav_menu.in, #nav_menu.collapsing{
+	background: rgba(0,0,0,0.6);
+	box-shadow: 0;
 }
 
 /*main meun item style*/
 #nav_menu ul {
-	/*background-color: rgba(0,0,0,0.6);*/
+	
 }
 #nav_menu li {
 	
@@ -85,24 +102,15 @@ sne theme
 }
 #nav_menu a:hover {
 	color: white;
-	background-color: rgba(0,0,0,0.6);
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-}
-.icon-bar{
-	background-color: white;
+	background: #F7C932;
 }
 
 /*main meun current item style*/
 #nav_menu .current-menu-item{
-	background-color: rgba(0,0,0,0.6);
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
 }
 #nav_menu .current-menu-item a {
-	
+	color: #F7C932;
+	background: rgba(0,0,0,0);
 }
 #nav_menu .current-menu-item a:hover {
 }
@@ -111,9 +119,19 @@ sne theme
 #nav_menu .current-menu-item a:visited{
 }
 
-/*sub meun item style*/
+/*dropdown style*/
+#nav_menu .open a{
+	color: white;
+	background: #F7C932;
+}
+/*dropdown submeun item style*/
 #nav_menu .sub-menu{
-	background-color: rgba(0,0,0,0.6);
+	width: 100%;
+	background-color: rgba(0,0,0,0);
+	box-shadow: 0;
+	padding: 0;
+	margin: 0;
+	/*border: 0;*/
 }
 #nav_menu .sub-menu ul{
 	
@@ -122,12 +140,9 @@ sne theme
 	
 }
 #nav_menu .sub-menu a{
-	-webkit-border-radius: 0px;
-	-moz-border-radius: 0px;
-	border-radius: 0px;
 }
 #nav_menu .sub-menu a:hover {
-	color: rgba(0,0,0,0.6);
+	color: black;
 }
 
 /*Footer*/
@@ -135,22 +150,14 @@ sne theme
 	background-color: #76BB29;
 }
 .footer_list{
-	margin:0 auto;
-	width: 70vw;
+	padding: 0;
 	padding-top: 40px;
 	padding-bottom: 40px;
 	color: white;
-	/*border: 2px solid blue;*/
 }
 .footer_title{
-	text-align: center;
-	height: 15vh;
-
-	/*border: 2px solid red;*/
 }
 .footer_content{
-	/*border: 2px solid red;*/
-	height: 15vh;
 }
 
 /*

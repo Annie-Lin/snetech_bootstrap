@@ -1,11 +1,7 @@
-#index_main_container{
-    /*width: 100vw;*/
-}
 
 .index_section{
 	text-align: center;
-	/*border: 1px solid red;*/
-    /*width: 100vw;*/
+	width: 100vw;
 }
 
 /*more tag's link style*/
@@ -16,6 +12,8 @@
 #index_intro{
     background-image: url(../img/LandingPage_Section01.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     height: 100vh;
 }
 .index_intro_title{
@@ -32,71 +30,60 @@
 }
 
 #index_solution{
-    
 }
 .index_solution_top{
     background-image: url(../img/LandingPage_Section02.jpg);
     background-size: cover;
-    width: 100vw;
-    height: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
 }
 .index_solution_title{
     font-size: 1.8em;
-    text-align: center;
-    height: 490px;
     padding-top: 5vh;
 }
 .index_solution_bottom{
     background-color: #F3F3F3;
-    margin: 0 auto;
     padding-top: 6vh;
     padding-bottom: 6vh;
 }
 .index_solution_bottom_list{
-    margin: 0 auto;
-    width: 80vw;
+    padding: 0;
 }
 .index_solution_item{
-    text-align: center;
-    width: 224px;
-    height: 350px;
+    padding-bottom: 10px;
 }
 .index_solution_card{
     background-color: white;
+
+    box-shadow: 0 2px 5px #727272;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    width: 200px;
-    height: 330px;
-    margin:0 auto;
-    box-shadow: 0 2px 5px #727272;
 }
 .index_solution_thumbnail{
-    padding-top: 20px;
+    padding-top: 4vh;
+    padding-bottom: 2vh;
 }
 
 .index_solution_item_title{
     font-size: 1.5em;
-    width: 100%;
-    height: 50px;
-    line-height: 50px;
-    margin: 0 auto;
 }
 .index_solution_item_title_topbar{
-    border-bottom: 3px solid #F7C932;
+    border-top: 3px solid #F7C932;
+    height: 1vh;
     width: 60%;
-    height: 10px;
     margin: 0 auto;
 }
 .index_solution_item_title_bottombar{
-    border-top: 3px solid #F7C932;
+    border-bottom: 3px solid #F7C932;
+    height: 1vh;
     width: 60%;
-    height: 10px;
     margin: 0 auto;
 }
 .index_solution_item_content{
     font-size: 1em;
-    padding: 10px;
+    padding: 5%;
 }
 .btn{
     background-color: #F7C932;
@@ -107,52 +94,41 @@
 }
 
 .index_customization_top{
-    /*height: 432px;*/
 }
 .index_customization_title{
     font-size: 1.8em;
-    text-align: left;
-    /*height: 490px;*/
-    padding-left: 45vw;
     padding-top: 6vh;
 }
 .index_customization_img{
-    margin-top: 10px;
-    margin-bottom: 20px;
-    padding-top: 5px;
-    padding-bottom: 40px;
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
 .index_customization_img img{
-    width: 70%;
+    width: 100%;
     height: auto;
 }
 
 .index_case{
     text-align: center;
     background-color: #F7C932;
-    /*height: 312px;*/
-    margin: 0 auto;
     color: white;
 }
 .index_case_title{
     font-size: 1.5em;
-    padding-top: 30px;
+    padding-top: 5vh;
 }
 .index_case_list{
-    width: 80vw;
-    margin: 0 auto;
-    padding-top: 50px;
-    padding-bottom: 30px;
+    padding: 0;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
 }
 .index_case_item{
-    margin: 0 auto;
+    margin-bottom: 5px;
 }
 .index_case_card{
     background-color: white;
-    width: 266px;
-    height: 149px;
-    padding: 0;
-    margin: 0;
+    margin: 0 1px;
+
 }
 .index_case_card_title{
     font-size: 1.5em;
@@ -163,9 +139,16 @@
 .index_case_card_title_bottombar{
     border-top: 3px solid #F7C932;
     width: 40%;
-    height: 30px;
+    height: 15px;
     margin: 0 auto;
     margin-top: 10px;
+}
+.index_case_card_img{
+    padding-bottom: 10px;
+}
+.index_case_card_img img{
+    width: 90%;
+    height: auto;
 }
 
 #index_team{
@@ -176,7 +159,12 @@
     padding-bottom: 20px;
 }
 .index_team_img{
-    padding-bottom: 20px;
+    padding-bottom: 50px;
+    margin: 0 auto;
+}
+.index_team_img img{
+    max-width: 99%;
+    height: auto;
 }
 
 /*bootstrap in 5 columns*/

@@ -13,7 +13,7 @@
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
@@ -33,7 +33,7 @@
 			<header role="banner">
 				<div class="row main-navigation">
 					<div>
-						<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+						<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 							<div class="container">
 							<div class="navbar-header">
 								<button type="button" class="navbar-toggle navbar-right navbar-fixed-top" data-toggle="collapse" data-target=".navbar-primary-collapse">
