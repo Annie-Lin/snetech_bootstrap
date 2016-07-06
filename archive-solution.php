@@ -14,9 +14,10 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 ?> 
 	<div id="main-column">
 		<main id="main" class="site-main" role="main">
+			<div id="header-space"></div>
 			<?php if ( have_posts ( ) ) : while ( have_posts ( ) ) : the_post ( ) ; ?>
 	            <!-- 單篇post骨架 -->
-	           <div class="category_solution" id="<?php echo rwmb_meta('en_title'); ?>">
+	            <div class="category_solution" id="<?php echo rwmb_meta('en_title'); ?>">
 	            	<div class="category_solution_title">
 	            		<div class="set-vmiddle">
 	            		<div class="category_solution_title_container row">
@@ -31,7 +32,7 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 	                <div class="category_solution_content">
 	                	<div class="category_solution_content_container row">
 	                	<div class="category_solution_fulldescription col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-5 col-md-offset-2">
-	                		<?php $more = 1; the_content("",true); ?>
+	                		<?php the_content(); ?>
 	                	</div>
 		                
 		                <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-3 col-md-offset-0">

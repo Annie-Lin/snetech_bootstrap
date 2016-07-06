@@ -14,9 +14,10 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 ?> 
 	<div id="main-column">
 		<main id="main" class="site-main" role="main">
-			<?php if ( have_posts ( ) ) : while ( have_posts ( ) ) : the_post ( ) ; ?>
+			<div id="header-space"></div>
+			<?php while ( have_posts() ) : the_post(); ?>
 	            <!-- 單篇post骨架 -->
-	           <div class="category_solution" id="<?php echo rwmb_meta('en_title'); ?>">
+	            <div class="category_solution" id="<?php echo rwmb_meta('en_title'); ?>">
 	            	<div class="category_solution_title">
 	            		<div class="set-vmiddle">
 	            		<div class="category_solution_title_container row">
@@ -48,10 +49,7 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 					</div>
 	            </div>
 	            <!-- 單篇post骨架 End-->
-	        <?php endwhile ; ?> <?php else : ?>     
-	            <!-- 輸出找不到文章提示 -->
-	            <h1>沒有找到文章</h1>
-	        <?php endif ; ?>
+	        <?php endwhile; ?>    
 		</main>
 	</div>
 
