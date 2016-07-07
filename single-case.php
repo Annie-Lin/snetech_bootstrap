@@ -33,7 +33,20 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 		                <!-- <p><?php the_content("",true); ?></p> --> <!-- 繼續閱讀之前不含link -->
 
 		                <div class="single_case_content row">
-			                <div class="col-xs-12 col-sm-6"><?php $more = 1; the_content("",true); ?></div> <!-- 繼續閱讀之後 -->
+			                <div class="col-xs-12 col-sm-6">
+			                	測試測試：</br>
+			                	<?php 
+		                		$related_solution_ids_array = rwmb_meta( 'related_solutions' );
+
+		                		if ( !empty( $related_solution_ids_array ) ) {
+								    echo implode(" ",$related_solution_ids_array);
+								}else{
+									echo '沒有東西';
+								}
+
+		                		?>
+
+			                	<?php $more = 1; the_content("",true); ?></div> <!-- 繼續閱讀之後 -->
 			                <div class="col-xs-12 col-sm-6"><?php if ( has_post_thumbnail() ) : 
 										the_post_thumbnail();
 									endif; ?></div>

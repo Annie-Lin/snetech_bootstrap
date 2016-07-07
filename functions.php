@@ -249,5 +249,29 @@ function sne_meta_boxes( $meta_boxes ) {
             ),
         ),
     );
+
+    $meta_boxes[] = array(
+        'title' => __( 'Case 相關欄位', 'textdomain' ),
+        'post_types' => 'case',
+        'fields' => array(
+            // RELATED SOLUTIONS
+            array(
+                'name'        => __( '相關解決方案', 'textdomain' ),
+                'id'          => "related_solutions",
+                'type'        => 'post',
+                // Post type
+                'post_type'   => 'solution',
+                // Field type, either 'select' or 'select_advanced' (default)
+                'field_type'  => 'checkbox_list',
+                'placeholder' => __( 'Select an Item', 'textdomain' ),
+                // Query arguments (optional). No settings means get all published posts
+                'query_args'  => array(
+                    'post_status'    => 'publish',
+                    'posts_per_page' => - 1,
+                ),
+            ),
+            
+        )
+    );
     return $meta_boxes;
 }

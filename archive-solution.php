@@ -36,8 +36,22 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 	                	</div>
 		                
 		                <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-3 col-md-offset-0">
-		                	<div class="category_solution_feature">產品特色</div>
-		                	<div class="category_solution_successfulcase">成功案例</div>
+		                	<div class="category_solution_additionalpanel">
+		                	<div class="category_solution_feature"><div class="category_solution_additionalpanel_sectiontitle">產品特色</div></div>
+		                	<div class="category_solution_successfulcase">
+		                		<div class="category_solution_additionalpanel_sectiontitle">成功案例：</div>
+		                		<?php 
+		                		$terms = rwmb_meta( 'related_solutions' );
+
+		                		if ($terms) {
+								    echo "有東西";
+								}else{
+									echo "沒有東西";
+								}
+
+		                		?>
+		                	</div>
+		                </div>
 
 		                	<p><?php if ( has_post_thumbnail() ) : 
 									the_post_thumbnail();
