@@ -37,9 +37,9 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 		                
 		                <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0 col-md-3 col-md-offset-0">
 		                	<div class="category_solution_additionalpanel">
-		                	<div class="category_solution_feature"><div class="category_solution_additionalpanel_sectiontitle">產品特色</div></div>
-		                	<div class="category_solution_successfulcase">
-		                		<div class="category_solution_additionalpanel_sectiontitle">成功案例：</div>
+		                	<div class="category_solution_feature category_solution_additionalpanel_section"><div class="category_solution_additionalpanel_sectiontitle">產品特色</div></div>
+		                	<div class="category_solution_successfulcase category_solution_additionalpanel_section">
+		                		<div class="category_solution_additionalpanel_sectiontitle">成功案例</div>
 
 		                		<!-- 取得相關成功案例LIST -->
 		                		<?php
@@ -51,7 +51,52 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 									$related_solution_ids_array = rwmb_meta( 'related_solutions' );
 
 			                		if ( in_array($current_solution_id, $related_solution_ids_array) ) {
-									    echo $post->post_title;
+
+			                	?>
+			                			<a href="<?php the_permalink(); ?>">
+			                			<div class="category_solution_sucessfulcase_unit">
+			                			
+			                			<!-- START category_solution_sucessfulcase_unit_title -->
+
+				                			<div class="category_solution_sucessfulcase_unit_title">
+												<?php	
+													$sucessfulcase_project_name=rwmb_meta('project_name');
+													echo $sucessfulcase_project_name;  
+												?>
+											</div>
+
+										<!-- END category_solution_sucessfulcase_unit_title -->
+
+										<!-- ADD A YELLOW BAR -->
+
+											<div class="index_case_card_title_bottombar"></div>
+
+										<!-- START category_solution_sucessfulcase_unit_logo -->
+
+											<div class="category_solution_sucessfulcase_unit_logo">
+												<?php   
+													$sucessfulcase_client_logo=rwmb_meta('client_logo');
+													if (!empty($sucessfulcase_client_logo)){
+			    										foreach ( $sucessfulcase_client_logo as $logo ) {
+															echo '<img src="';
+															echo $logo['full_url']; 
+															echo '" class="desaturate">';
+														}
+													}else{
+														the_title();
+													}
+
+												?>
+											</div>  
+
+										<!-- END category_solution_sucessfulcase_unit_logo -->
+										
+									    </div>
+									    </a>
+
+
+								<?php
+									
 									}else{
 										
 									}
@@ -64,7 +109,6 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 				                <?php endif ; ?>
 				                
 				                <!-- 結束取得相關成功案例LIST -->
-
 		                	</div>
 		                </div>
 

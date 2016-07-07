@@ -251,12 +251,31 @@ function sne_meta_boxes( $meta_boxes ) {
     );
 
     $meta_boxes[] = array(
-        'title' => __( 'Case 相關欄位', 'textdomain' ),
+        'title' => __( 'Case 補充欄位', 'textdomain' ),
         'post_types' => 'case',
-        'fields' => array(
+        'fields' => array(  
+            // PROJECT NAME
+            array(
+                // Field name - Will be used as label
+                'name'  => __( '專案名稱', 'textdomain' ),
+                // Field ID, i.e. the meta key
+                'id'    => "project_name",
+                'type'  => 'text',
+                // CLONES: Add to make the field cloneable (i.e. have multiple value)
+                'clone' => false,
+            ),
+
+            // CLIENT LOGO IMAGE UPLOAD
+            array(
+                'name' => __( '客戶LOGO圖片上傳', 'textdomain' ),
+                'id'   => "client_logo",
+                'type' => 'plupload_image',
+                'max_file_uploads' => 1,
+            ),
+
             // RELATED SOLUTIONS
             array(
-                'name'        => __( '相關解決方案', 'textdomain' ),
+                'name'        => __( '運用解決方案', 'textdomain' ),
                 'id'          => "related_solutions",
                 'type'        => 'post',
                 // Post type

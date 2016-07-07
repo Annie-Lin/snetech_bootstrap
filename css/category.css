@@ -36,6 +36,7 @@
 .category_solution_shortdescription{
 	font-size: 1.1em;
 	line-height: 1.6em;
+	font-weight: bold;
 }
 
 .category_solution_shortdescription p{
@@ -56,19 +57,48 @@
 	background-color: #F3F3F3;
 }
 
+.category_solution_additionalpanel_section{
+	padding: 20px 12%;
+}
+
 .category_solution_feature{
-	padding: 10px 10px 10px 10px;
 }
 
 .category_solution_additionalpanel_sectiontitle{
 	font-size: 0.8em;
 	line-height: 1.6em;
-	border-bottom: 1px solid black;
+	text-align: center;
 }
 
 .category_solution_successfulcase{
-	padding: 10px;
 	
+}
+
+.category_solution_sucessfulcase_unit{
+	background: #ffffff;
+	padding:16px 10px 10px 10px;
+	margin: 16px 0px;
+	box-shadow: 0 2px 5px #727272;
+	-webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.category_solution_sucessfulcase_unit_title{
+	text-align: center;
+}
+
+.category_solution_sucessfulcase_unit_logo{
+	height: 40px;
+}
+
+.category_solution_sucessfulcase_unit_logo img{
+	margin: auto;
+	display: block;
+	max-width:100%;
+	max-height:100%;
+	height: auto;
+	width:auto;
 }
 
 .vcenter {
@@ -83,5 +113,13 @@
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+}
+
+img.desaturate { 
+	-webkit-filter: grayscale(1);
+	-webkit-filter: grayscale(100%);
+	filter: gray;
+	filter: grayscale(100%);
+	filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' height='0'><filter id='greyscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0' /></filter></svg>#greyscale");
 }
 
