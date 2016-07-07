@@ -40,16 +40,31 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 		                	<div class="category_solution_feature"><div class="category_solution_additionalpanel_sectiontitle">產品特色</div></div>
 		                	<div class="category_solution_successfulcase">
 		                		<div class="category_solution_additionalpanel_sectiontitle">成功案例：</div>
-		                		<?php 
-		                		$terms = rwmb_meta( 'related_solutions' );
 
-		                		if ($terms) {
-								    echo "有東西";
-								}else{
-									echo "沒有東西";
-								}
+		                		<!-- 取得相關成功案例LIST -->
+		                		<?php
+		                			$current_solution_id=$post->ID;
+		                			$args = array( 'post_type' => 'case');
+                    				$sucessfulcases_loop = new WP_Query( $args );
+                    				if ( $sucessfulcases_loop->have_posts() ) : while ( $sucessfulcases_loop->have_posts() ) : $sucessfulcases_loop->the_post();
+									
+									$related_solution_ids_array = rwmb_meta( 'related_solutions' );
+
+			                		if ( in_array($current_solution_id, $related_solution_ids_array) ) {
+									    echo $post->post_title;
+									}else{
+										
+									}
 
 		                		?>
+
+		                		<?php endwhile ; ?><?php wp_reset_postdata(); ?><?php else : ?>     
+				                    <!-- 輸出找不到文章提示 -->
+				                    <h1>沒有成功案例</h1>
+				                <?php endif ; ?>
+				                
+				                <!-- 結束取得相關成功案例LIST -->
+
 		                	</div>
 		                </div>
 
