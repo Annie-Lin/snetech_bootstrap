@@ -36,7 +36,6 @@
 .category_solution_shortdescription{
 	font-size: 1.1em;
 	line-height: 1.6em;
-	font-weight: bold;
 }
 
 .category_solution_shortdescription p{
@@ -88,17 +87,25 @@
 	text-align: center;
 }
 
-.category_solution_sucessfulcase_unit_logo{
+.category_solution_sucessfulcase_unit_client{
 	height: 40px;
 }
 
-.category_solution_sucessfulcase_unit_logo img{
+.category_solution_sucessfulcase_unit_client img{
 	margin: auto;
 	display: block;
 	max-width:100%;
 	max-height:100%;
 	height: auto;
 	width:auto;
+}
+
+.category_solution_successfulcase_unit_clientname{
+	text-align: center;
+	font-size: 1.38em;
+	font-weight: 500;
+	letter-spacing:0.24em;
+	color: #484848;
 }
 
 .vcenter {

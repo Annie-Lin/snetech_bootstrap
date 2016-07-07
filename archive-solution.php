@@ -71,25 +71,27 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 
 											<div class="index_case_card_title_bottombar"></div>
 
-										<!-- START category_solution_sucessfulcase_unit_logo -->
+										<!-- START category_solution_sucessfulcase_unit_client -->
 
-											<div class="category_solution_sucessfulcase_unit_logo">
+											<div class="category_solution_sucessfulcase_unit_client">
 												<?php   
 													$sucessfulcase_client_logo=rwmb_meta('client_logo');
 													if (!empty($sucessfulcase_client_logo)){
 			    										foreach ( $sucessfulcase_client_logo as $logo ) {
-															echo '<img src="';
+															echo '<div class="category_solution_successfulcase_unit_clientlogo set-vmiddle"> <img src="';
 															echo $logo['full_url']; 
-															echo '" class="desaturate">';
+															echo '" class="desaturate"></div>';
 														}
 													}else{
+														echo '<div class="category_solution_successfulcase_unit_clientname set-vmiddle">';
 														the_title();
+														echo '</div>';
 													}
 
 												?>
 											</div>  
 
-										<!-- END category_solution_sucessfulcase_unit_logo -->
+										<!-- END category_solution_sucessfulcase_unit_client -->
 										
 									    </div>
 									    </a>
