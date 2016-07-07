@@ -36,17 +36,18 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
                     $loop = new WP_Query( $args );
                     if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); ?>
                     <!-- 單篇post骨架 -->
-                    <div class="index_solution_item col-xs-12 col-md-15 equalHeightCell">
-                        <div class="index_solution_card row">
+                    <div class="index_solution_item col-xs-12 col-sm-15 equalHeightCell">
+                        <div class="index_solution_card row row-eq-height">
                             <div class="index_solution_thumbnail col-xs-4 col-sm-12">
-                                <?php if ( has_post_thumbnail() ) : the_post_thumbnail(); endif; ?></div>
+                                <?php if ( has_post_thumbnail() ) : the_post_thumbnail(); endif; ?>
+                            </div>
                             <div class="index_solution_text col-xs-8 col-sm-12">
                                 <div class="index_solution_item_title_topbar"></div>
                                 <div class="index_solution_item_title">
                                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
                                 <div class="index_solution_item_title_bottombar"></div>
-                                <div class="index_solution_item_content"><?php the_excerpt(); ?></div>
                             </div>
+                            <div class="index_solution_item_content col-xs-12 col-sm-12"><?php the_excerpt(); ?></div>
                         </div>
                         <button class="btn"><a href="<?php bloginfo('wpurl'); ?>/category/solution/">閱讀更多</a></button>
                     </div>
