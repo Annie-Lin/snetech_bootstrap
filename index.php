@@ -18,8 +18,12 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 
 	<div id="index_intro" class="index_section col-xs-12 row">
         <div class="index_intro_title col-xs-10 col-xs-offset-1">
-            <span class="typedText"><?php echo do_shortcode( '[typed string0="資產異動管理" string1="衣物洗滌管理" typeSpeed="40" startDelay="0" backSpeed="40" backDelay="3000" loop="1"]' ) ?></span> 
-            <span>可以更容易<span>
+            <div class="index_intro_title_typedtext">
+                <?php echo do_shortcode( '[typed string0="資產異動管理" string1="衣物洗滌管理" typeSpeed="40" startDelay="0" backSpeed="40" backDelay="3000" loop="1"]' ) ?>
+            </div>
+            <div class="index_intro_title_fixedtext">
+                &nbsp;可以更容易
+            </div>
         </div>
         <div class="index_intro_subtitle col-xs-10 col-xs-offset-1">力十幫您找出最佳解決方案</div>
     </div>

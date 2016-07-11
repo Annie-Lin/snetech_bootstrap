@@ -14,7 +14,7 @@
 }
 
 .category_solution_title{
-	background-color: #F7C932;
+	/*-- background-color: #F7C932; --*/
 	height: 200px;
 	width: 100%;
 	margin: 0;
@@ -31,6 +31,8 @@
 	font-size:2.2em;
 	margin-top:10px;
 	margin-bottom:10px;
+	color: #F7C932;
+	letter-spacing: 0.12em;
 }
 
 .category_solution_shortdescription{

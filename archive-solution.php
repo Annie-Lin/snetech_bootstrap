@@ -21,13 +21,22 @@ $main_column_size = bootstrapBasicGetMainColumnSize();
 	            	<div class="category_solution_title">
 	            		<div class="set-vmiddle">
 	            		<div class="category_solution_title_container row">
-		                	<div class="category_solution_title_text col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-1 col-md-3 col-md-offset-2 vcenter"><?php the_title(); ?></div>
-		                	<div class="category_solution_shortdescription col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-5 col-md-offset-0 vcenter">
-		                		<?php the_excerpt(); ?>
+		                	<div class="category_solution_title_text col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-1 col-md-3 col-md-offset-2 vcenter">
+		                		<?php the_title(); ?>
 		                	</div>
+		                	
+		                	<div class="category_solution_shortdescription col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-5 col-md-offset-0 vcenter">
+		                		<div class="index_case_card_title_bottombar"></div>
+		                		<?php the_excerpt(); ?>
+		                		<div class="index_case_card_title_bottombar"></div>
+		                	</div>
+
 		                </div>
 		            </div>
 	            </div>
+
+	            
+
 
 	                <div class="category_solution_content">
 	                	<div class="category_solution_content_container row">
