@@ -47,7 +47,7 @@ img{
 }
 
 /*Equal Height*/
-@media (min-width: 768px) {
+@media (min-width: 992px) {
 	.equalHeightRow{
 		display: table;
 	}
